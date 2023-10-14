@@ -5,13 +5,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 // vs-code-organize-imports-disable-next-line
 import "@/scss/style.scss";
+import Link from "next/link";
 
 export const metadata: Metadata = {
 	title: {
 		template: "%s | GenAi",
 		default: "GenAi",
 	},
-	description: "AI Content Writing & Copywriting HTML5 Landing Page Template",
+	description: "AI Based Copywriting and Content Writing Nextjs Landing Page Template",
 };
 
 type TRootLayoutProps = {
@@ -28,6 +29,14 @@ export default function RootLayout({ children }: TRootLayoutProps) {
 				<RootClientLayout>
 					<div className="wrapper d-flex flex-column justify-between">{children}</div>
 				</RootClientLayout>
+				{process.env.SWITCHER_LINK ? (
+					<Link
+						href={process.env.SWITCHER_LINK}
+						className="version-switcher bg-primary position-fixed text-white"
+					>
+						Light Version
+					</Link>
+				) : null}
 			</body>
 		</html>
 	);
