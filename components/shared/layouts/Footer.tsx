@@ -194,7 +194,7 @@ export default function Footer() {
 				<div className="text-center py-6 mt-8">
 					<p className="fs-sm mb-0">
 						Copyright <span className="text-primary-dark">GenAI</span>. Design By
-						Marvel_Theme
+						Nuclear_Themes
 					</p>
 				</div>
 			</div>
