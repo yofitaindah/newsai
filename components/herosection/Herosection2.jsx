@@ -11,7 +11,7 @@ import Reveal from "../utils/Reveal";
 export default function Herosection2() {
 	return (
 		<section className="hero-section style-2 position-relative py-10 py-lg-15">
-			<div class="striped-shape">
+			<div className="striped-shape">
 				<Image src={bgStripe} alt="shape" />
 			</div>
 			<div className="container">

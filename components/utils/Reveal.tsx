@@ -6,12 +6,12 @@ import React, { ElementType, HTMLAttributes } from "react";
 type TRevealProps = HTMLAttributes<HTMLElement> & {
 	children: React.ReactNode;
 	delay?: number;
-	el?: ElementType;
+	el?: keyof JSX.IntrinsicElements;
 	className?: string;
 };
 
 export default function Reveal({ el, children, delay, className, ...rest }: TRevealProps) {
-	const DynamicComponent = el ? motion(el) : motion.div;
+	const DynamicComponent = el ? motion.create(el) : motion.create("div");
 
 	return (
 		// @ts-ignore

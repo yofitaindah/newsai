@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import ReactTyped from "react-typed";
+import {ReactTyped} from "react-typed";
 
 export default function TypedText() {
 	const [isMounted, setIsMounted] = useState(false);

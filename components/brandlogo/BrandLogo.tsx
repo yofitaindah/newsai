@@ -23,7 +23,7 @@ export default function BrandLogo({ data }: TBrandLogoProps) {
 						alt="logo"
 						height={36}
 						width={150}
-						className="img-fluid brand-img w-auto"
+						className="brand-img object-contain"
 					/>
 				</a>
 			) : (
@@ -33,7 +33,7 @@ export default function BrandLogo({ data }: TBrandLogoProps) {
 						alt="logo"
 						height={36}
 						width={150}
-						className="img-fluid brand-img w-auto"
+						className="brand-img object-contain"
 					/>
 				</div>
 			)}
