@@ -85,11 +85,6 @@ const navbarLinks: TNavItem[] = [
 		link: "/use-cases",
 	},
 	{
-		id: 4,
-		name: "Pricing",
-		link: "/pricing-plans",
-	},
-	{
 		id: 5,
 		name: "Contact",
 		link: "/contact",
