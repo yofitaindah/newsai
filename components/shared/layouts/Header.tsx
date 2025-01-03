@@ -57,11 +57,6 @@ const navbarLinks: TNavItem[] = [
 				link: "/use-cases/digital-ad-copy",
 			},
 			{
-				id: 207,
-				name: "Pricing",
-				link: "/pricing-plans",
-			},
-			{
 				id: 208,
 				name: "Login",
 				link: "/login",
