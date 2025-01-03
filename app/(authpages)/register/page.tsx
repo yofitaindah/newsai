@@ -2,7 +2,7 @@
 
 import appleIcon from "@/public/images/icons/apple.svg";
 import googleIcon from "@/public/images/icons/google.svg";
-import siteLogo from "@/public/images/logo.png";
+import siteLogo from "@/public/images/logo_news.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";

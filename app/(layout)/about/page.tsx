@@ -15,7 +15,7 @@ export default function AboutPage() {
 	return (
 		<main className="flex-grow-1">
 			<Breadcrumb
-				title="About GenAI."
+				title="About NewsAI."
 				path={[
 					{
 						text: "Home",

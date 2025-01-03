@@ -12,7 +12,7 @@ export default function AboutSection() {
 				<div className="row align-center">
 					<Reveal className="col-lg-6 col-xl-5" delay={0.05}>
 						<div className="text-center text-lg-start">
-							<p className="text-primary-dark fs-sm">About GenAI.</p>
+							<p className="text-primary-dark fs-sm">About NewsAI.</p>
 							<h2 className="mb-4 text-white">
 								10,000+ Writers, Marketers, & Business owners Love GenAI.
 							</h2>

@@ -12,7 +12,7 @@ export const dataFeatures: TFeature[] = [
 		id: 2,
 		title: "Provides Useful Suggestions",
 		description:
-			"GenAI writing tools can analyze data and generate insights to help writers create more compelling and informative content.",
+			"NewsAI writing tools can analyze data and generate insights to help writers create more compelling and informative content.",
 		icon: "brand-juejin",
 	},
 	{

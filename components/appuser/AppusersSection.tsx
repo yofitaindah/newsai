@@ -11,7 +11,7 @@ export default function AppusersSection() {
 						<div className="text-center">
 							<Reveal el="h1" className="text-white mb-0" delay={0.05}>
 								Who are the user of{" "}
-								<span className="text-primary-dark">GenAI.</span> writing tools
+								<span className="text-primary-dark">NewsAI.</span> writing tools
 							</Reveal>
 						</div>
 					</div>

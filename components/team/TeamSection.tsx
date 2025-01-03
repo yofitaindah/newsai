@@ -10,7 +10,7 @@ export default function TeamSection() {
 					<div className="col-lg-9">
 						<Reveal className="text-center" delay={0.05}>
 							<h1 className="text-white">
-								<span className="text-primary-dark">GenAI.</span> is Powered by a{" "}
+								<span className="text-primary-dark">NewsAI.</span> is Powered by a{" "}
 								<br className="d-none d-xl-block" />
 								Dynamic Team.
 							</h1>

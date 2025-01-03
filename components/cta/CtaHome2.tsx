@@ -12,7 +12,7 @@ export default function CtaHome2() {
 						<div className="col-lg-5">
 							<div className="p-0 pt-md-6 text-center text-lg-start p-lg-6 p-xl-10">
 								<h2 className="text-white mb-6">
-									Using <span className="text-primary-dark">GenAI</span> you can
+									Using <span className="text-primary-dark">NewsAI</span> you can
 									save hours each week creating long-form content.
 								</h2>
 								<Link href="/login" className="btn btn-primary-dark">

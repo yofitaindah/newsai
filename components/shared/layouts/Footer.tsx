@@ -1,5 +1,5 @@
 import Newsletter from "@/components/utils/Newsletter";
-import footerLogo from "@/public/images/logo.png";
+import footerLogo from "@/public/images/logo_news.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,7 +12,7 @@ export default function Footer() {
 						<div className="row g-6">
 							<div className="col-md-4 col-lg-4">
 								<div className="footer-widget text-center text-md-start">
-									<h6 className="text-white mb-2">Gen AI</h6>
+									<h6 className="text-white mb-2">News AI</h6>
 									<ul className="link-list list-unstyled mb-0">
 										<li>
 											<Link href="/about">About</Link>
@@ -193,7 +193,7 @@ export default function Footer() {
 
 				<div className="text-center py-6 mt-8">
 					<p className="fs-sm mb-0">
-						Copyright <span className="text-primary-dark">GenAI</span>. Design By
+						Copyright <span className="text-primary-dark">NewsAI</span>. Design By
 						Nuclear_Themes
 					</p>
 				</div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppContext } from "@/context/appContext";
-import headerBlueLogo from "@/public/images/logo.png";
+import headerBlueLogo from "@/public/images/logo_news.png";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,19 +19,7 @@ const navbarLinks: TNavItem[] = [
 	{
 		id: 1,
 		name: "Home",
-		link: "",
-		dropdownMenu: [
-			{
-				id: 101,
-				name: "Home one",
-				link: "/",
-			},
-			{
-				id: 102,
-				name: "Home two",
-				link: "/home-two",
-			},
-		],
+		link: "/",
 	},
 	{
 		id: 2,
