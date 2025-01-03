@@ -49,7 +49,7 @@ export default function Home2() {
 
 			<ReviewsSection2 />
 
-			<PricingSection2 />
+			{/* <PricingSection2 /> */}
 
 			<FaqSection />
 

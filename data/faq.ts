@@ -3,7 +3,7 @@ import { TFaq } from "@/types/faq";
 export const dataFaqs: TFaq[] = [
     {
         id: 1,
-        header: "What Is GenAI Content Writing Tool?",
+        header: "What Is NewsAI Content Writing Tool?",
         body: "Once you know your audience, choose a topic that will resonate with them.Look for trending topics in your industry or address common questions or challenges your audience may be facing.Keep in mind that your topic should be both interesting and relevant to your audience",
     },
     {
