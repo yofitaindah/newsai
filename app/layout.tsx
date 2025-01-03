@@ -9,8 +9,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
 	title: {
-		template: "%s | GenAi",
-		default: "GenAi",
+		template: "%s | NewsAI",
+		default: "NewsAI",
 	},
 	description: "AI Based Copywriting and Content Writing Nextjs Landing Page Template",
 };
