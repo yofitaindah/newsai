@@ -1,6 +1,6 @@
 ---
-title: "News Article"
-description: "Writing blog content with GenAI, make sure you have a clear understanding of who your audience is."
+title: "Historical Analysis and Trends"
+description: "Provide tools to explore historical correlations between news events and cryptocurrency price movements. Offer trend analysis and predictions to help users make informed decisions."
 icon: "article"
 ---
 

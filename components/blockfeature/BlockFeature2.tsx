@@ -40,7 +40,7 @@ export default function BlockFeature2({ index, data, reversed = false }: TBlockF
 								</li>
 							))}
 						</ul>
-						{linkText && linkUrl ? (
+						{/* {linkText && linkUrl ? (
 							<Link
 								href={linkUrl}
 								className="arrow-link arrow-link-primary-dark text-primary-dark gap-3"
@@ -48,7 +48,7 @@ export default function BlockFeature2({ index, data, reversed = false }: TBlockF
 								<span>{linkText}</span>
 								<i className="ti ti-arrow-up-right fs-5"></i>
 							</Link>
-						) : null}
+						) : null} */}
 					</div>
 				</Reveal>
 				<Reveal className="col-lg-6" delay={0.25}>

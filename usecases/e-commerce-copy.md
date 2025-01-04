@@ -1,6 +1,6 @@
 ---
-title: "eCommerce Copy"
-description: "Writing blog content with GenAI, make sure you have a clear understanding of who your audience is."
+title: "Sentiment Analysis"
+description: "Utilize AI-based sentiment analysis to evaluate the tone of news articles, tweets, and announcements (positive, neutral, negative). Provide insights into market sentiment for specific cryptocurrencies or sectors."
 icon: "brand-appgallery"
 ---
 

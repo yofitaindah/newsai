@@ -26,7 +26,7 @@ export const dataFeatures: TFeature[] = [
 		id: 4,
 		title: "Accessibility",
 		description:
-			"Offer a seamless user experience through a web dashboard, mobile app, and API.",
+			"Offer a seamless user experience through a web dashboard and mobile app.",
 		icon: "3d-cube-sphere",
 	},
 ];

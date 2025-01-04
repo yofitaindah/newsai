@@ -1,6 +1,6 @@
 ---
-title: "Landing Page Copy"
-description: "First know who you're targeting. Identify your target audience and understand their needs."
+title: "Customizable Alerts"
+description: "Enable users to set personalized alerts for breaking news about cryptocurrencies, trends, or specific keywords. Notify users via email, SMS, or in-app notifications."
 icon: "list-details"
 ---
 

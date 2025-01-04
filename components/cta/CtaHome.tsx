@@ -1,4 +1,4 @@
-import ctaImage from "@/public/images/screens/screen-1.jpg";
+import ctaImage from "@/public/images/screens/screen-news.gif";
 import ctaShape from "@/public/images/shapes/blurry-shape-4.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,11 +16,11 @@ export default function CtaHome() {
 						<div className="col-lg-10">
 							<div className="text-center pt-6 px-6 pt-md-10 px-md-10 pt-lg-18 px-lg-18">
 								<h2 className="mb-6 text-white">
-									Using <span className="text-primary-dark">GenAI</span> you can
-									save hours each week creating long-form content.
+									Using <span className="text-primary-dark">NewsAI</span> you can
+									stay updated with real-time cryptocurrency news.
 								</h2>
 								<Link href="/login" className="btn btn-primary-dark">
-									Get Started Free
+									Get Started
 								</Link>
 								<div className="cta-image-container mt-10">
 									<svg
@@ -52,7 +52,6 @@ export default function CtaHome() {
 									</svg>
 									<div className="cta-img rounded-top-4">
 										<Image
-											placeholder="blur"
 											src={ctaImage}
 											alt="shape"
 											className="img-fluid w-full h-full object-cover"

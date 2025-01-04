@@ -184,8 +184,7 @@ export default function Footer() {
 								/>
 							</Link>
 							<p className="fs-sm mb-0 mt-4">
-								A Magical Tool to Optimize you content for the first know who
-								you&apos;re targeting. Identify your target audience.
+								Real-Time Crypto News and Analytics, Personalized.
 							</p>
 						</div>
 					</div>
@@ -193,8 +192,7 @@ export default function Footer() {
 
 				<div className="text-center py-6 mt-8">
 					<p className="fs-sm mb-0">
-						Copyright <span className="text-primary-dark">NewsAI</span>. Design By
-						Nuclear_Themes
+						Copyright <span className="text-primary-dark">NewsAI</span>
 					</p>
 				</div>
 			</div>
