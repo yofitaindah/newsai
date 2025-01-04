@@ -54,6 +54,7 @@ export default function Herosection() {
 									</div>
 								</div>
 							</Reveal>
+							<br/>
 							<Reveal el="p" className="text-primary-dark">
 								Stay informed with the latest updates, instantly accessible, and always reliable. Trust us for your real-time news needs.
 							</Reveal>
