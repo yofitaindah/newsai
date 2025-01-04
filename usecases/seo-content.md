@@ -1,6 +1,6 @@
 ---
-title: "SEO Content"
-description: "Writing blog content with GenAI, make sure you have a clear understanding of who your audience is."
+title: "Social Media and Community Insights"
+description: "Track trending topics, hashtags, and influential figures in the crypto world on platforms like Twitter, Reddit, and Discord. Identify new projects or issues capturing attention in the crypto community."
 icon: "seo"
 ---
 

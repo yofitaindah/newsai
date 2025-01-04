@@ -1,6 +1,6 @@
 ---
-title: "Marketing Copy"
-description: "A Magical Tool to Optimize you content for the first know who you're targeting. Identify your target."
+title: "AI Generated Summaries"
+description: "Use Natural Language Processing to generate concise summaries of lengthy news articles. Highlight key points and their implications for the crypto market."
 icon: "chart-histogram"
 ---
 

@@ -38,7 +38,7 @@ export default function Usecase({ data, variant = "none" }: TUsecaseProps) {
 				<p className="mb-0">{description}</p>
 			</div>
 
-			<div className="flex-shrink-0">
+			{/* <div className="flex-shrink-0">
 				<Link
 					href={`/use-cases/${slug}`}
 					className="arrow-link arrow-link-primary-dark gap-3 fs-sm"
@@ -46,7 +46,7 @@ export default function Usecase({ data, variant = "none" }: TUsecaseProps) {
 					<span>Try {title}</span>
 					<i className="ti ti-arrow-up-right fs-5"></i>
 				</Link>
-			</div>
+			</div> */}
 		</div>
 	);
 }

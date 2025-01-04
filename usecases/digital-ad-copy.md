@@ -1,6 +1,6 @@
 ---
-title: "Digital Ad Copy"
-description: "A Magical Tool to Optimize you content for the first know who you're targeting. Identify your target."
+title: "Real Time News Aggregation"
+description: "Collect and analyze crypto-related news from various sources, including blogs, news websites, social media platforms (like Twitter), and official crypto project announcements."
 icon: "brand-blogger"
 ---
 

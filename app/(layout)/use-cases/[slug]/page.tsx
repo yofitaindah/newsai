@@ -106,8 +106,6 @@ export default function UsecaseDetails({ params }: TBlogDetailsPageProps) {
 
 			<ReviewsSection />
 
-			<FaqSection />
-
 			<CtaHome />
 		</main>
 	);

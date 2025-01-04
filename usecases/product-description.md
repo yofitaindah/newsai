@@ -1,6 +1,6 @@
 ---
-title: "Product Description"
-description: "Optimize you content for the first know who you're targeting. Identify your target audience."
+title: "Multilingual Support"
+description: "Translate news from various languages into the user's preferred language, ensuring global reach and inclusivity. Track regional news sources to gain a more comprehensive view of international crypto trends."
 icon: "stack-2"
 ---
 

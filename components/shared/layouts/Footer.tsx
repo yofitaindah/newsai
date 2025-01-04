@@ -34,38 +34,6 @@ export default function Footer() {
 							</div>
 							<div className="col-md-4 col-lg-4">
 								<div className="footer-widget text-center text-md-start">
-									<h6 className="text-white mb-2">Use Cases</h6>
-									<ul className="link-list list-unstyled mb-0">
-										<li>
-											<Link href="/use-cases/digital-ad-copy">
-												Digital Ad Copy
-											</Link>
-										</li>
-										<li>
-											<Link href="/use-cases/e-commerce-copy">
-												eCommerce Copy
-											</Link>
-										</li>
-										<li>
-											<Link href="/use-cases/landing-page-copy">
-												Landing Page Copy
-											</Link>
-										</li>
-										<li>
-											<Link href="/use-cases/writing-blog-content">
-												Writing Blog Content
-											</Link>
-										</li>
-										<li>
-											<Link href="/use-cases/product-description">
-												Product Description
-											</Link>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div className="col-md-4 col-lg-4">
-								<div className="footer-widget text-center text-md-start">
 									<h6 className="text-white mb-4">News & Update</h6>
 									<Newsletter />
 									<ul className="list-unstyled d-flex flex-wrap align-center justify-center justify-md-start gap-3 social-list mb-0 mt-5">
@@ -184,8 +152,7 @@ export default function Footer() {
 								/>
 							</Link>
 							<p className="fs-sm mb-0 mt-4">
-								A Magical Tool to Optimize you content for the first know who
-								you&apos;re targeting. Identify your target audience.
+								Real-Time Crypto News and Analytics, Personalized.
 							</p>
 						</div>
 					</div>
@@ -193,8 +160,7 @@ export default function Footer() {
 
 				<div className="text-center py-6 mt-8">
 					<p className="fs-sm mb-0">
-						Copyright <span className="text-primary-dark">NewsAI</span>. Design By
-						Nuclear_Themes
+						Copyright <span className="text-primary-dark">NewsAI</span>
 					</p>
 				</div>
 			</div>
