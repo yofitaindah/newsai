@@ -24,12 +24,12 @@ export default function Herosection() {
 									Best Crypto News AI
 								</Reveal>
 								<Reveal el="h1" className="text-white mb-8" delay={0.15}>
-									Real-Time Crypto News and Analystics, Personalized<br />
+									Real Time Crypto News and Analystics, Personalized<br />
 									<TypedText />
 								</Reveal>
 								<Reveal delay={0.3}>
 									<Link href="/login" className="btn btn-lg btn-gradient-1">
-										Let's Try!
+										Let&apos;s Try!
 									</Link>
 								</Reveal>
 							</div>
