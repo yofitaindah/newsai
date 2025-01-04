@@ -15,7 +15,7 @@ export default function TypedText() {
 
 	return (
 		<ReactTyped
-			strings={["Real-Time", "Curated", "AI-Enhanced"]}
+			strings={["Faster", "Smarter", "News AI"]}
 			typeSpeed={100}
 			className="fw-bold text-gradient-2 typed-animation"
 		/>

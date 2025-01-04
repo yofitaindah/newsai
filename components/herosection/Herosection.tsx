@@ -20,12 +20,12 @@ export default function Herosection() {
 					<div className="col-lg-9">
 						<div className="text-center">
 							<div className="position-relative z-1">
-								{/* <Reveal el="p" className="text-primary-dark">
-									Best Crypto News AI
-								</Reveal> */}
 								<Reveal el="h1" className="text-white mb-8" delay={0.15}>
-									Real Time Crypto News and Analystics, Personalized<br />
+									The Speed You Trust, The News You Need<br />
 									<TypedText />
+								</Reveal>
+								<Reveal el="p" className="text-primary-dark">
+								Stay informed with the latest updates, instantly accessible, and always reliable. Trust us for your real-time news needs.
 								</Reveal>
 								{/* <Reveal delay={0.3}>
 									<Link href="/login" className="btn btn-lg btn-gradient-1">
