@@ -23,76 +23,63 @@ const navbarLinks: TNavItem[] = [
 	},
 	{
 		id: 2,
-		name: "Pages",
+		name: "NewsAI",
 		link: "",
 		dropdownMenu: [
 			{
 				id: 201,
-				name: "About",
+				name: "NewsAI",
 				link: "/about",
 			},
 			{
 				id: 202,
-				name: "Contact",
+				name: "Tokenomics",
 				link: "/contact",
 			},
 			{
 				id: 203,
-				name: "Blog",
+				name: "Roadmap",
 				link: "/blogs",
 			},
 			{
 				id: 204,
-				name: "Article",
-				link: "/blogs/using-ai-to-write-articles-how-i-churn-out-2000-words",
-			},
-			{
-				id: 205,
-				name: "Use cases",
+				name: "Team Details",
 				link: "/use-cases",
 			},
 			{
-				id: 206,
-				name: "Case details",
-				link: "/use-cases/digital-ad-copy",
-			},
-			{
-				id: 208,
-				name: "Login",
-				link: "/login",
-			},
-			{
-				id: 209,
-				name: "Register",
-				link: "/register",
-			},
-			{
-				id: 210,
-				name: "Forgot password",
-				link: "/forgot-password",
-			},
-			{
-				id: 211,
-				name: "404",
-				link: "/404",
+				id: 205,
+				name: "FaQ",
+				link: "/faq",
 			},
 		],
 		twoCols: true,
 	},
 	{
 		id: 3,
-		name: "Use cases",
+		name: "Social",
 		link: "/use-cases",
-	},
-	{
-		id: 5,
-		name: "Contact",
-		link: "/contact",
-	},
-	{
-		id: 6,
-		name: "Login",
-		link: "/login",
+		dropdownMenu: [
+			{
+				id: 201,
+				name: "Telegram",
+				link: "/about",
+			},
+			{
+				id: 202,
+				name: "Twitter",
+				link: "/contact",
+			},
+			{
+				id: 203,
+				name: "Tiktok",
+				link: "/blogs",
+			},
+			{
+				id: 203,
+				name: "Youtube",
+				link: "/blogs",
+			},
+		],
 	},
 ];
 

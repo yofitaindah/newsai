@@ -28,9 +28,9 @@ export default function Home() {
 					<div className="row justify-center mb-18">
 						<div className="col-lg-9">
 							<div className="text-center">
-								<Reveal el="p" className="text-primary-dark" delay={0.05}>
+								{/* <Reveal el="p" className="text-primary-dark" delay={0.05}>
 									NewsAI Use Features
-								</Reveal>
+								</Reveal> */}
 								<Reveal el="h1" className="text-white mb-0" delay={0.1}>
 								Read News Better and Faster, The Future of AI News is Already Here
 								</Reveal>
@@ -44,8 +44,6 @@ export default function Home() {
 			</section>
 
 			<ReviewsSection />
-
-			<FaqSection />
 
 			<CtaHome />
 		</main>

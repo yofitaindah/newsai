@@ -5,30 +5,24 @@ import Breadcrumb from "@/components/shared/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Pricing Plans",
+	title: "FaQ",
 };
 
 export default function PricingPlans() {
 	return (
 		<main className="flex-grow-1">
 			<Breadcrumb
-				title="Pricing & Plan"
+				title="Frequently Asked Questions"
 				path={[
 					{
 						text: "Home",
 						link: "/",
 					},
-					{
-						text: "Pricing",
-					},
 				]}
 			/>
 
-			<PricingSection2 />
-
 			<FaqSection />
-
-			<CtaHome />
+			
 		</main>
 	);
 }

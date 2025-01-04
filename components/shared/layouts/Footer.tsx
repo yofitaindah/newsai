@@ -34,38 +34,6 @@ export default function Footer() {
 							</div>
 							<div className="col-md-4 col-lg-4">
 								<div className="footer-widget text-center text-md-start">
-									<h6 className="text-white mb-2">Use Cases</h6>
-									<ul className="link-list list-unstyled mb-0">
-										<li>
-											<Link href="/use-cases/digital-ad-copy">
-												Digital Ad Copy
-											</Link>
-										</li>
-										<li>
-											<Link href="/use-cases/e-commerce-copy">
-												eCommerce Copy
-											</Link>
-										</li>
-										<li>
-											<Link href="/use-cases/landing-page-copy">
-												Landing Page Copy
-											</Link>
-										</li>
-										<li>
-											<Link href="/use-cases/writing-blog-content">
-												Writing Blog Content
-											</Link>
-										</li>
-										<li>
-											<Link href="/use-cases/product-description">
-												Product Description
-											</Link>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div className="col-md-4 col-lg-4">
-								<div className="footer-widget text-center text-md-start">
 									<h6 className="text-white mb-4">News & Update</h6>
 									<Newsletter />
 									<ul className="list-unstyled d-flex flex-wrap align-center justify-center justify-md-start gap-3 social-list mb-0 mt-5">

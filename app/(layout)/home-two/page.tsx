@@ -48,8 +48,6 @@ export default function Home2() {
 
 			<ReviewsSection2 />
 
-			<FaqSection />
-
 			<CtaHome2 />
 		</main>
 	);

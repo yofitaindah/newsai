@@ -45,8 +45,6 @@ export default function UseCases() {
 				</div>
 			</section>
 
-			<FaqSection />
-
 			<CtaHome />
 		</main>
 	);
