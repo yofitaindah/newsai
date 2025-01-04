@@ -85,3 +85,14 @@ Last Update: 14 October 2024
 @import "components/account";
 @import "components/footer";
 @import "dark";
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.align-items-start {
+    align-items: start !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}

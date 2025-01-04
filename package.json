@@ -12,6 +12,7 @@
 		"@types/node": "22.7.5",
 		"@types/react": "18.3.11",
 		"@types/react-dom": "18.3.1",
+		"axios": "^1.7.9",
 		"classnames": "^2.5.1",
 		"eslint": "^8.57.1",
 		"eslint-config-next": "14.2.15",
@@ -19,6 +20,10 @@
 		"gray-matter": "^4.0.3",
 		"markdown-to-jsx": "^7.5.0",
 		"next": "^14.2.15",
+		"node-cron": "^3.0.3",
+		"openai": "^4.77.3",
+		"pusher": "^5.2.0",
+		"pusher-js": "^8.4.0-rc2",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-hook-form": "^7.53.0",
@@ -28,9 +33,11 @@
 		"sass": "^1.79.5",
 		"sharp": "^0.33.5",
 		"swiper": "^11.1.14",
+		"twitter-api-v2": "^1.19.0",
 		"typescript": "5.6.3"
 	},
 	"devDependencies": {
+		"@types/node-cron": "^3.0.11",
 		"prettier": "^3.3.3"
 	}
 }
