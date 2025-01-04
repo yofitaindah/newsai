@@ -24,9 +24,9 @@ export default function Herosection() {
 									The Speed You Trust, The News You Need<br />
 									<TypedText />
 								</Reveal>
-								<Reveal el="p" className="text-primary-dark">
+								{/* <Reveal el="p" className="text-primary-dark">
 								Stay informed with the latest updates, instantly accessible, and always reliable. Trust us for your real-time news needs.
-								</Reveal>
+								</Reveal> */}
 								{/* <Reveal delay={0.3}>
 									<Link href="/login" className="btn btn-lg btn-gradient-1">
 										Let&apos;s Try!
@@ -53,6 +53,9 @@ export default function Herosection() {
 										></iframe>
 									</div>
 								</div>
+							</Reveal>
+							<Reveal el="p" className="text-primary-dark">
+								Stay informed with the latest updates, instantly accessible, and always reliable. Trust us for your real-time news needs.
 							</Reveal>
 							{/* <ul className="d-flex flex-wrap gap-4 gap-md-8 gap-lg-10 align-center justify-center mt-8 mb-0">
 								<li>Write Blogs 10X Faster</li>
