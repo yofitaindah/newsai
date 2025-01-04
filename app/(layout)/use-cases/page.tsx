@@ -31,11 +31,10 @@ export default function UseCases() {
 						<div className="col-lg-9">
 							<div className="text-center">
 								<Reveal el="p" delay={0.05} className="text-primary-dark">
-									NewsAI Use Cases
+									NewsAI Features
 								</Reveal>
 								<Reveal el="h1" className="text-white mb-0" delay={0.1}>
-									Write Better Content Faster, The Future Of AI Writing Tools is
-									Here
+								Read News Better and Faster, The Future of AI News is Already Here
 								</Reveal>
 							</div>
 						</div>
