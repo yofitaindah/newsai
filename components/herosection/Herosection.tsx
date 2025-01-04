@@ -21,15 +21,15 @@ export default function Herosection() {
 						<div className="text-center">
 							<div className="position-relative z-1">
 								<Reveal el="p" className="text-primary-dark">
-									Best AI Copywriting Tool
+									Best Crypto News AI
 								</Reveal>
 								<Reveal el="h1" className="text-white mb-8" delay={0.15}>
-									A 10X Faster Way To Write Your <br />
+									Real-Time Crypto News and Analystics, Personalized<br />
 									<TypedText />
 								</Reveal>
 								<Reveal delay={0.3}>
 									<Link href="/login" className="btn btn-lg btn-gradient-1">
-										Start Writing - It&apos;s Free
+										Let's Try!
 									</Link>
 								</Reveal>
 							</div>
@@ -54,7 +54,7 @@ export default function Herosection() {
 									</div>
 								</div>
 							</Reveal>
-							<ul className="d-flex flex-wrap gap-4 gap-md-8 gap-lg-10 align-center justify-center mt-8 mb-0">
+							{/* <ul className="d-flex flex-wrap gap-4 gap-md-8 gap-lg-10 align-center justify-center mt-8 mb-0">
 								<li>Write Blogs 10X Faster</li>
 								<li>Write Higher Converting Posts</li>
 								<li>Write More Engaging Emails</li>
@@ -62,7 +62,7 @@ export default function Herosection() {
 							<div className="d-flex gap-8 align-center justify-center mt-12 review-badges">
 								<Image src={reviewIcon1} alt="icon" className="img-fluid" />
 								<Image src={reviewIcon2} alt="icon" className="img-fluid" />
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>

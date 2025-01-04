@@ -10,8 +10,7 @@ export default function FeaturesSection3() {
 			<div className="container">
 				<div className="text-center mb-18">
 					<Reveal el="h1" className="mb-0" delay={0.05}>
-						Generate Creative AI Copy On-The-Spot, <br className="d-none d-lg-block" />
-						Across Your Favorite Tools
+						Crypto News AI Agent Platform
 					</Reveal>
 				</div>
 
