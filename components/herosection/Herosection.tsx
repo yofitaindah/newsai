@@ -41,12 +41,16 @@ export default function Herosection() {
 										className="shape animate-scale"
 									/>
 									<div className="mt-12 rounded-5 border border-primary-dark shadow-lg overflow-hidden position-relative z-1">
-										<Image
-											placeholder="blur"
-											src={heroImage}
-											alt="hero image"
-											className="img-fluid d-inline-block"
-										/>
+										<iframe
+											src = "http://147.79.70.213:3001/"
+											title = "embedded content"
+											className="iframe-content"
+											style={{
+												width: "100%",
+												height: "100%",
+												border: "none",
+											}}
+										></iframe>
 									</div>
 								</div>
 							</Reveal>

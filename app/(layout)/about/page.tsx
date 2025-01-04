@@ -15,29 +15,29 @@ export default function AboutPage() {
 	return (
 		<main className="flex-grow-1">
 			<Breadcrumb
-				title="About NewsAI."
+				title="NewsAI"
 				path={[
 					{
 						text: "Home",
 						link: "/",
 					},
 					{
-						text: "About Us",
+						text: "NewsAI",
 					},
 				]}
 			/>
 
-			<AboutSection />
+			{/* <AboutSection /> */}
 
 			<FeaturesSection3 />
 
-			<TeamSection />
+			{/* <TeamSection />
 
 			<ReviewsSection />
 
 			<BrandLogoSection2 />
 
-			<CtaHome />
+			<CtaHome /> */}
 		</main>
 	);
 }

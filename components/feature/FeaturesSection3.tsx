@@ -15,16 +15,28 @@ export default function FeaturesSection3() {
 					</Reveal>
 				</div>
 
-				<div className="row row-cols-1 row-cols-lg-3 g-6 g-xl-14">
+				{/* <div className="row row-cols-1 row-cols-lg-3 g-6 g-xl-14">
 					{dataFeatures.map((feature, index) => (
 						<Reveal key={feature.id} className="col-lg-4" delay={0.2}>
 							<Feature data={feature} index={index} />
 						</Reveal>
 					))}
-				</div>
+				</div> */}
 
 				<Reveal className="video-popup-container position-relative" delay={0.05}>
-					<div className="ratio ratio-16x9 rounded-4 overflow-hidden mt-16">
+					<div className="mt-12 rounded-5 border border-primary-dark shadow-lg overflow-hidden position-relative z-1">
+										<iframe
+											src = "http://147.79.70.213:3001/"
+											title = "embedded content"
+											className="iframe-content"
+											style={{
+												width: "100%",
+												height: "100%",
+												border: "none",
+											}}
+										></iframe>
+					</div>
+					{/* <div className="ratio ratio-16x9 rounded-4 overflow-hidden mt-16">
 						<Image
 							placeholder="blur"
 							src={videoThumb}
@@ -50,7 +62,7 @@ export default function FeaturesSection3() {
 						>
 							<path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
 						</svg>
-					</a>
+					</a> */}
 				</Reveal>
 			</div>
 		</section>
