@@ -2,8 +2,7 @@ import OpenAI from "openai";
 
 const openAi = new OpenAI({
     apiKey:
-        process.env.OPENAI_API_KEY ||
-        "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",
+        process.env.OPENAI_API_KEY as string
 });
 
 interface SummarizeNewsResponse {
