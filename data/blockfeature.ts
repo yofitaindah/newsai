@@ -3,14 +3,11 @@ import { TBlockFeature } from "@/types/blockfeature";
 export const dataBlockFeatures: TBlockFeature[] = [
 	{
 		id: 1,
-		title: "Let's Create AI-Powered Content With A Single Click.",
-		subtitle: "Features 1",
+		title: "Our website is the central hub for all things crypto.",
+		subtitle: "Website",
 		description:
-			"To create powerful content, you need to know who you're targeting. Identify your target audience and understand their needs, interests, and pain points.",
+			"It offers an intuitive user interface where you can easily access breaking news, real-time market data, and expert opinions. The site is designed to provide a seamless reading experience with categorized news and trending stories, allowing you to quickly find relevant information in an ever-changing landscape.",
 		listItems: [
-			"Start creating powerful content, for your next ads",
-			"Let's Communicate with your customers with emotions",
-			"Use visuals like images, videos, or infographics to make your content more engaging",
 		],
 		image: "/images/illustrations/feature-illustration-1-dark.svg",
 		linkText: "Get Started Free",
@@ -18,14 +15,11 @@ export const dataBlockFeatures: TBlockFeature[] = [
 	},
 	{
 		id: 2,
-		title: "A Magical Tool To Optimize Your Content For First Page Rankings",
-		subtitle: "Features 2",
+		title: "As one of the most popular platforms for real-time updates",
+		subtitle: "Twitter",
 		description:
-			"A Magical Tool to Optimize you content for the first know who you're targeting. Identify your target audience and understand their needs, interests, and pain points.",
+			"Twitter is the perfect place for quick news bites and instant reactions. Follow us on Twitter for continuous updates, alerts on market shifts, and real-time news coverage. Our AI also curates relevant trending topics and hot discussions, ensuring that you stay plugged into what's happening in the crypto space in a timely manner.",
 		listItems: [
-			"Start creating powerful content, for your next ads",
-			"Let's Communicate with your customers with emotions",
-			"Use visuals like images, videos, or infographics to make your content more engaging",
 		],
 		image: "/images/illustrations/feature-illustration-2-dark.svg",
 		linkText: "Request A Demo",
@@ -33,14 +27,11 @@ export const dataBlockFeatures: TBlockFeature[] = [
 	},
 	{
 		id: 3,
-		title: "Write Blog Posts, Stories, & Even Books With.",
-		subtitle: "Features 3",
+		title: "For users who prefer more interactive communication and real-time discussions",
+		subtitle: "Telegram",
 		description:
-			"To create powerful content, you need to know who you're targeting. Identify your target audience and understand their needs, interests, and pain points.",
+			" our Telegram channel is the go-to space. Join our community to engage with fellow crypto enthusiasts, receive instant alerts, and share insights in a chat-friendly environment. Telegram allows for direct, no-delay access to the latest news and updates, ensuring you remain up-to-date without any lag.",
 		listItems: [
-			"Start creating powerful content, for your next ads",
-			"Let's Communicate with your customers with emotions",
-			"Use visuals like images, videos, or infographics to make your content more engaging",
 		],
 		image: "/images/illustrations/feature-illustration-3-dark.svg",
 		linkText: "Get Started Free",
