@@ -1,10 +1,11 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { useOutsideClick } from "@/hook/useOutsideClick";
+
 import { INewsCategory } from "@/types/categorynews";
 import { CATEGORIES_NEWS } from "@/data/categorynews";
 import Icons from "../icon/icon";
+import useOutsideClick from "@/hook/useOutsideClick";
 
 const MultipleSelect = (): JSX.Element => {
     const [query, setQuery] = useState("");
@@ -20,7 +21,9 @@ const MultipleSelect = (): JSX.Element => {
         setMenuOpen(false);
     };
 
-    useOutsideClick(ref, handleOutSideClick);
+    useOutsideClick(ref, () => {
+        if (menuOpen) setMenuOpen(false); // Close the dropdown if it's open
+    });
 
     const filteredTags = CATEGORIES_NEWS.filter(
         (item: INewsCategory) =>
@@ -47,15 +50,18 @@ const MultipleSelect = (): JSX.Element => {
     };
 
     return (
-        <div ref={ref} className="d-flex align-items-center gap-2 mb-5">
+        <div className="d-flex align-items-center gap-2 mb-5">
             <div className="position-relative" style={{ width: "20rem", fontSize: "0.875rem" }}>
                 {selected?.length ? (
-                    <div className="w-80 position-relative card d-flex flex-wrap gap-1 p-2 mb-2" style={{backgroundColor: "#fff", fontSize: "0.875rem"}}>
-                        {selected.map((tag) => {
+                    <div
+                        className="position-relative card d-flex flex-wrap gap-1 p-2 mb-2"
+                        style={{ fontSize: "0.875rem", width: "20rem" }}
+                    >
+                        {selected.map((tag, i) => {
                             return (
                                 <div
-                                    key={tag}
-                                    className="rounded-circle d-inline-block py-1.5 px-3 border border-secondary bg-light text-secondary d-flex align-items-center gap-2"
+                                    key={i}
+                                    className="card-tag py-1.5 px-3 d-flex align-items-center gap-2"
                                 >
                                     {tag}
                                     <div
@@ -72,6 +78,7 @@ const MultipleSelect = (): JSX.Element => {
                         <div className="w-full text-right">
                             <span
                                 className="text-gray-400 cursor-pointer"
+                                style={{cursor: 'pointer'}}
                                 onClick={() => {
                                     setSelected([]);
                                     inputRef.current?.focus();
@@ -82,7 +89,10 @@ const MultipleSelect = (): JSX.Element => {
                         </div>
                     </div>
                 ) : null}
-                <div className="card flex items-center justify-between p-3 w-80 gap-2.5">
+                <div
+                    className="card d-flex align-items-center flex-row p-3 gap-2"
+                    style={{ width: "20rem" }}
+                >
                     <Icons.Search />
                     <input
                         ref={inputRef}
@@ -91,6 +101,13 @@ const MultipleSelect = (): JSX.Element => {
                         onChange={(e) => setQuery(e.target.value.trimStart())}
                         placeholder="Search or Create tags"
                         className="bg-transparent text-sm flex-1 caret-rose-600"
+                        style={{
+                            fontSize: "0.875rem",
+                            caretColor: "#f43f5e",
+                            outline: "none",
+                            border: "none",
+                            width: "100%",
+                        }}
                         onFocus={() => {
                             setMenuOpen(true);
                         }}
@@ -107,9 +124,21 @@ const MultipleSelect = (): JSX.Element => {
                     />
                 </div>
 
-                {/* Menu's */}
                 {menuOpen ? (
-                    <div className="card absolute w-full max-h-52 mt-2 p-1 flex overflow-y-auto scrollbar-thin scrollbar-track-slate-50 scrollbar-thumb-slate-200">
+                    <div
+                        ref={ref}
+                        className="card mt-2 p-1"
+                        style={{
+                            position: "absolute",
+                            maxHeight: "200px",
+                            display: "flex",
+                            overflowY: "auto",
+                            scrollbarWidth: "thin",
+                            scrollBehavior: "smooth",
+                            width: "100%",
+                            zIndex: 100,
+                        }}
+                    >
                         <ul className="w-full">
                             {filteredTags?.length ? (
                                 filteredTags.map((tag, i) => (
@@ -142,7 +171,8 @@ const MultipleSelect = (): JSX.Element => {
             </div>
 
             <button
-                className="min-w-20 h-[44px] place-self-end bg-rose-500 hover:bg-rose-700 border-rose-500 hover:border-rose-700 text-sm border-4 text-white py-1 px-2 rounded"
+                className="btn btn-primary-dark"
+                style={{ margin: "0px !important", placeSelf: "flex-end" }}
                 type="button"
                 onClick={handleUpdateNews}
             >
