@@ -25,8 +25,8 @@ services:
       - NEXT_PUBLIC_PUSHER_CLUSTER=${NEXT_PUBLIC_PUSHER_CLUSTER}
       - PUSHER_APP_ID=${PUSHER_APP_ID}
       - PUSHER_SECRET=${PUSHER_SECRET}
-    depends_on:
-      - redis
+    # depends_on:
+    #   - redis
 
   # redis:
   #   image: redis:alpine
