@@ -44,7 +44,7 @@ const navbarLinks: TNavItem[] = [
 			{
 				id: 204,
 				name: "Team Details",
-				link: "/use-cases",
+				link: "/team",
 			},
 			{
 				id: 205,
