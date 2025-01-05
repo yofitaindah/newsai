@@ -27,24 +27,19 @@ const navbarLinks: TNavItem[] = [
 		link: "",
 		dropdownMenu: [
 			{
-				id: 201,
-				name: "NewsAI",
-				link: "/about",
-			},
-			{
 				id: 202,
 				name: "Tokenomics",
-				link: "/contact",
+				link: "/tokenomics",
 			},
 			{
 				id: 203,
 				name: "Roadmap",
-				link: "/blogs",
+				link: "/roadmap",
 			},
 			{
 				id: 204,
 				name: "Team Details",
-				link: "/use-cases",
+				link: "/team",
 			},
 			{
 				id: 205,
@@ -62,22 +57,22 @@ const navbarLinks: TNavItem[] = [
 			{
 				id: 201,
 				name: "Telegram",
-				link: "/about",
+				link: "http://t.me/NewsAiAgent",
 			},
 			{
 				id: 202,
 				name: "Twitter",
-				link: "/contact",
+				link: "https://x.com/NewsAIAgents",
 			},
 			{
 				id: 203,
 				name: "Tiktok",
-				link: "/blogs",
+				link: "https://www.tiktok.com/@newsaiagents",
 			},
 			{
 				id: 203,
 				name: "Youtube",
-				link: "/blogs",
+				link: "https://youtube.com/@newsaiagent",
 			},
 		],
 	},
@@ -166,7 +161,7 @@ export default function Header() {
 							))}
 						</ul>
 						<div className="">
-							<Link href="/login" className="btn btn-outline-primary-dark">
+							<Link href="/" className="btn btn-outline-primary-dark">
 								Get started
 							</Link>
 						</div>

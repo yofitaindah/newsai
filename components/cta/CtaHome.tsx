@@ -19,7 +19,7 @@ export default function CtaHome() {
 									Using <span className="text-primary-dark">NewsAI</span> you can
 									stay updated with real-time cryptocurrency news.
 								</h2>
-								<Link href="/login" className="btn btn-primary-dark">
+								<Link href="/" className="btn btn-primary-dark">
 									Get Started
 								</Link>
 								<div className="cta-image-container mt-10">

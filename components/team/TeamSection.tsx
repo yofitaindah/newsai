@@ -1,6 +1,6 @@
 import { dataTeam } from "@/data/team";
 import Reveal from "../utils/Reveal";
-import TeamProfile from "./TeamProfile";
+import TeamProfile from "./TeamProfile"; 
 
 export default function TeamSection() {
 	return (
