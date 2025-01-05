@@ -39,7 +39,7 @@ const navbarLinks: TNavItem[] = [
 			{
 				id: 203,
 				name: "Roadmap",
-				link: "/blogs",
+				link: "/roadmap",
 			},
 			{
 				id: 204,
