@@ -1,5 +1,6 @@
 import Newsletter from "@/components/utils/Newsletter";
 import footerLogo from "@/public/images/logo_news.png";
+import LogoCoin from "@/public/images/coin1.png";
 import Image from "next/image";
 import Link from "next/link";
 import DextoolIcon from '@/public/images/logo_dextool.svg';
@@ -30,7 +31,7 @@ export default function Footer() {
 							</p>
 						</div>
 					</div>
-					<div className="col-lg-4">
+					<div className="col-lg-2">
 						<div className="footer-widget text-center text-lg-start">
 							<h6 className="text-white mb-2">Quick Links</h6>
 							<ul className="link-list list-unstyled mb-0">
@@ -50,6 +51,19 @@ export default function Footer() {
 									<Link href="/faq">FaQ</Link>
 								</li>
 							</ul>
+						</div>
+					</div>
+					<div className="col-lg-2">
+						<div className="footer-widget text-center text-lg-start">
+							<Link href="https://newsai2.vercel.app/about">
+								<Image
+									placeholder="blur"
+									src={LogoCoin}
+									alt="Coin"
+									height={140}
+									priority
+								/>
+							</Link>
 						</div>
 					</div>
 					<div className="col-lg-4">

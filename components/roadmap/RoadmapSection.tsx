@@ -1,6 +1,7 @@
 import { TPostMetadata } from "@/types/blog";
 import Reveal from "../utils/Reveal";
-// import { MDBContainer, MDBIcon } from "mdb-react-ui-kit";
+import { MDBContainer, MDBIcon } from "mdb-react-ui-kit";
+import '@/public/css/roadmap.css';
 // import BlogItem from "./BlogItem";
 
 export default function RoadmapSection() {
