@@ -15,7 +15,7 @@ export default function CtaHome2() {
 									Using <span className="text-primary-dark">NewsAI</span> you can
 									save hours each week creating long-form content.
 								</h2>
-								<Link href="/login" className="btn btn-primary-dark">
+								<Link href="/" className="btn btn-primary-dark">
 									Get Started Free
 								</Link>
 							</div>

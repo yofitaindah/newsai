@@ -15,9 +15,13 @@ export default function RoadmapSection() {
           </span>
 
           <h5 className="fw-bold">Phase 1</h5>
-          <p className="text-muted mb-2 fw-bold">2025</p>
           <p className="text-muted">
-          Build core features: news aggregation, sentiment analysis, and real-time alerts. Launch web dashboard and mobile app prototypes. Launching NEWS AI $NEAI on Uniswap, ERC20. Engaging the community through community outreach.
+            <ul>
+              <li>Build core features: news aggregation, sentiment analysis, and real-time alerts</li>
+              <li>Launch web dashboard and mobile app prototypes</li>
+              <li>Launching NEWS AI $NEAI on Uniswap, ERC20</li>
+              <li>Engaging the community through community outreach</li>
+            </ul>
           </p>
         </li>
 
@@ -26,9 +30,12 @@ export default function RoadmapSection() {
             {/* <MDBIcon fas icon="hand-holding-usd" color="primary" size="sm" /> */}
           </span>
           <h5 className="fw-bold">Phase 2</h5>
-          <p className="text-muted mb-2 fw-bold">2025</p>
           <p className="text-muted">
-          Implement advanced NLP models for summarization and context understanding. Introduce recommendation engines. Auditing $NEAI to increase holder trust. Accelerating community expansion through user engagement marketing campaigns.
+            <ul>
+              <li>Implement advanced NLP models for summarization and context understanding</li>
+              <li>Introduce recommendation engines. Auditing $NEAI to increase holder trust</li>
+              <li>Accelerating community expansion through user engagement marketing campaigns</li>
+            </ul>
           </p>
         </li>
 
@@ -37,9 +44,13 @@ export default function RoadmapSection() {
             {/* <MDBIcon fas icon="users" color="primary" size="sm" /> */}
           </span>
           <h5 className="fw-bold">Phase 3</h5>
-          <p className="text-muted mb-2 fw-bold">2025</p>
           <p className="text-muted">
-          Collaboration with KOLs and CTs. More advertising, promotions, and collaborations. Roll out API access for institutions. Expand global coverage and multi-language support.
+            <ul>
+              <li>Collaboration with KOLs and CTs</li>
+              <li>More advertising, promotions, and collaborations</li>
+              <li>Roll out API access for institutions</li>
+              <li>Expand global coverage and multi-language support.</li>
+            </ul>
           </p>
         </li>
 
@@ -48,9 +59,13 @@ export default function RoadmapSection() {
             {/* <MDBIcon fas icon="money-bill-wave" color="primary" size="sm" /> */}
           </span>
           <h5 className="fw-bold">Phase 4</h5>
-          <p className="text-muted mb-2 fw-bold">2025</p>
           <p className="text-muted">
-          Add user forums and discussion boards. Launch educational content and tutorials. More feature on the $NEAI Platform. Fixing bugs and adjusting the platform based on beta user feedback.
+           <ul>
+              <li>Add user forums and discussion boards</li>
+              <li>Launch educational content and tutorials</li>
+              <li>More feature on the $NEAI Platform</li>
+              <li>Fixing bugs and adjusting the platform based on beta user feedback</li>
+            </ul>
           </p>
         </li>
       </ul>

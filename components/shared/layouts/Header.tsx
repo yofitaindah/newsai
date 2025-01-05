@@ -27,14 +27,9 @@ const navbarLinks: TNavItem[] = [
 		link: "",
 		dropdownMenu: [
 			{
-				id: 201,
-				name: "NewsAI",
-				link: "/about",
-			},
-			{
 				id: 202,
 				name: "Tokenomics",
-				link: "/contact",
+				link: "/tokenomics",
 			},
 			{
 				id: 203,
@@ -166,7 +161,7 @@ export default function Header() {
 							))}
 						</ul>
 						<div className="">
-							<Link href="/login" className="btn btn-outline-primary-dark">
+							<Link href="/" className="btn btn-outline-primary-dark">
 								Get started
 							</Link>
 						</div>
