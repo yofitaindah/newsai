@@ -72,7 +72,7 @@ export default function Footer() {
 							<Newsletter />
 							<ul className="list-unstyled d-flex flex-wrap align-center justify-center justify-lg-start gap-3 social-list mb-0 mt-5">
 								<li>
-									<Link href="/">
+									<Link href="http://t.me/NewsAiAgent" target="_blank">
 										<Image
 											src={TelegramIcon}
 											alt="GenAi"
@@ -82,7 +82,7 @@ export default function Footer() {
 									</Link>
 								</li>
 								<li>
-									<Link href="/">
+									<Link href="https://x.com/NewsAIAgents" target="_blank">
 										<Image
 											src={TwitterIcon}
 											alt="GenAi"
@@ -92,7 +92,7 @@ export default function Footer() {
 									</Link>
 								</li>
 								<li>
-									<Link href="/">
+									<Link href="https://youtube.com/@newsaiagent" target="_blank">
 										<Image
 											src={YoutubeIcon}
 											alt="GenAi"
@@ -102,7 +102,7 @@ export default function Footer() {
 									</Link>
 								</li>
 								<li>
-									<Link href="/">
+									<Link href="https://www.tiktok.com/@newsaiagents" target="_blank">
 										<Image
 											src={TiktokIcon}
 											alt="GenAi"
@@ -112,7 +112,7 @@ export default function Footer() {
 									</Link>
 								</li>
 								<li>
-									<Link href="/">
+									<Link href="/" target="_blank">
 										<Image
 											src={DextoolIcon}
 											alt="GenAi"
@@ -122,7 +122,7 @@ export default function Footer() {
 									</Link>
 								</li>
 								<li>
-									<Link href="/">
+									<Link href="/" target="_blank">
 										<Image
 											src={EtherscanIcon}
 											alt="GenAi"

@@ -62,22 +62,22 @@ const navbarLinks: TNavItem[] = [
 			{
 				id: 201,
 				name: "Telegram",
-				link: "/about",
+				link: "http://t.me/NewsAiAgent",
 			},
 			{
 				id: 202,
 				name: "Twitter",
-				link: "/contact",
+				link: "https://x.com/NewsAIAgents",
 			},
 			{
 				id: 203,
 				name: "Tiktok",
-				link: "/blogs",
+				link: "https://www.tiktok.com/@newsaiagents",
 			},
 			{
 				id: 203,
 				name: "Youtube",
-				link: "/blogs",
+				link: "https://youtube.com/@newsaiagent",
 			},
 		],
 	},
@@ -236,6 +236,7 @@ function NavbarLinkItem({
 							<li key={dropItem.id}>
 								<Link
 									className="dropdown-item "
+									target="_blank" 
 									href={dropItem.link}
 									onClick={collapseMenu}
 								>
