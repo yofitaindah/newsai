@@ -11,14 +11,14 @@ export default function ContactPage() {
 	return (
 		<main className="flex-grow-1">
 			<Breadcrumb
-				title="Contact With Us"
+				title="Tokenomics"
 				path={[
 					{
 						text: "Home",
 						link: "/",
 					},
 					{
-						text: "Contact",
+						text: "Tokenomics",
 					},
 				]}
 			/>

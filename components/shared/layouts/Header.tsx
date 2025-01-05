@@ -236,7 +236,6 @@ function NavbarLinkItem({
 							<li key={dropItem.id}>
 								<Link
 									className="dropdown-item "
-									target="_blank" 
 									href={dropItem.link}
 									onClick={collapseMenu}
 								>
