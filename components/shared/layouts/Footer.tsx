@@ -60,7 +60,7 @@ export default function Footer() {
 									placeholder="blur"
 									src={LogoCoin}
 									alt="Coin"
-									height={140}
+									height={100}
 									priority
 								/>
 							</Link>
