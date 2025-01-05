@@ -8,10 +8,10 @@ services:
       dockerfile: Dockerfile
     container_name: agentai-app
     ports:
-      - '3001:3000'
+      - '3000:3000'
     environment:
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
+      # - REDIS_HOST=redis
+      # - REDIS_PORT=6379
       - BEARER_TOKEN=${BEARER_TOKEN}
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - ACCESS_TOKEN_SECRET=${ACCESS_TOKEN_SECRET}
@@ -28,9 +28,9 @@ services:
     depends_on:
       - redis
 
-  redis:
-    image: redis:alpine
-    container_name: agentai-redis
-    ports:
-      - '6379:6379'
+  # redis:
+  #   image: redis:alpine
+  #   container_name: agentai-redis
+  #   ports:
+  #     - '6379:6379'
     #COMMAND: [ "pm2-runtime", "start", "npm", "--", "start" ]
