@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="container py-5">
         <div className="row g-4 justify-content-center text-center text-lg-start">
           {/* Column 1 */}
-          <div className="col-lg-4 col-md-6">
+          <div className="col-lg-6 col-md-6">
             <div className="footer-widget">
               <Link href="/">
                 <Image
@@ -33,28 +33,10 @@ export default function Footer() {
           </div>
 
           {/* Column 2 */}
-          <div className="col-lg-4 col-md-6">
-            <div className="footer-widget">
-              <h6 className="text-white mb-2">Quick Links</h6>
-              <ul className="list-unstyled mb-0">
-                <li>
-                  <Link href="/tokenomics">Tokenomics</Link>
-                </li>
-                <li>
-                  <Link href="/roadmap">Roadmap</Link>
-                </li>
-                <li>
-                  <Link href="/team">Team Details</Link>
-                </li>
-                <li>
-                  <Link href="/faq">FAQ</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+          
 
           {/* Column 3 */}
-          <div className="col-lg-4 col-md-6">
+          <div className="col-lg-6 col-md-6">
             <div className="footer-widget">
               <h6 className="text-white mb-4">News & Updates</h6>
               <Newsletter />
