@@ -114,7 +114,7 @@ export default function Footer() {
 			style={{ justifyContent: "center", display: "flex" }}
 		>
 			<p className="fs-sm mb-0 me-2">Copyright</p>
-			<Link href="https://newsai2.vercel.app/about">
+			<Link href="/about">
 			<Image
 				placeholder="blur"
 				src={LogoCoin}
