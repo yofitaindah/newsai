@@ -9,7 +9,7 @@ import { CATEGORIES_NEWS } from "@/data/categorynews";
 import Icons from "../icon/icon";
 import useOutsideClick from "@/hook/useOutsideClick";
 
-const MultipleSelect = (): JSX.Element => {
+const MultipleSelect = React.memo(() => {
     const searchParams = useSearchParams();
     const [controlNews, setControlNews] = useState(false);
     const [query, setQuery] = useState("");
@@ -220,6 +220,8 @@ const MultipleSelect = (): JSX.Element => {
             )}
         </div>
     );
-};
+});
+
+MultipleSelect.displayName = "MultipleSelect";
 
 export default MultipleSelect;

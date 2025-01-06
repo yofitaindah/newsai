@@ -1,6 +1,6 @@
 "use client";
 import { Space_Mono } from "next/font/google";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import Pusher from "pusher-js";
@@ -12,18 +12,22 @@ const spaceMono = Space_Mono({
     weight: "400",
 });
 
-const AgentAIFeature = () => {
+const AgentAIFeature = React.memo(() => {
     const [status, setStatus] = useState(false);
     const [message, setMessage] = useState<{ time: string; message: string }[]>([]);
 
     useEffect(() => {
-        // Initialize Pusher client
+        // Initialize Pusher with your app credentials
         setMessage([]);
+        handleUpdateNews();
+
         const pusher = new Pusher(process.env.NEXT_PUBLIC_PUSHER_KEY as string, {
             cluster: process.env.NEXT_PUBLIC_PUSHER_CLUSTER as string,
         });
 
         const channel = pusher.subscribe("agent");
+
+        // Listen for an event (e.g., 'news')
         channel.bind("news", (data: { message: string }) => {
             setMessage((message: { time: string; message: string }[]) => [
                 ...message,
@@ -33,7 +37,24 @@ const AgentAIFeature = () => {
                 },
             ]);
         });
+        // Cleanup on component unmount
+        return () => {
+            channel.unbind_all();
+            pusher.unsubscribe("agent");
+        };
     }, []);
+
+    const handleUpdateNews = async () => {
+        await fetch("/api/cron/start", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                schedule: "*/15 * * * *", // every 30 minute
+                query: "",
+                // statusTrigger,
+            }), // every minute
+        });
+    };
 
     return (
         <div className="w-100">
@@ -147,6 +168,8 @@ const AgentAIFeature = () => {
             </div>
         </div>
     );
-};
+});
+
+AgentAIFeature.displayName = "AgentAIFeature";
 
 export default AgentAIFeature;
