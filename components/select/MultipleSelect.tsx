@@ -8,7 +8,6 @@ import { INewsCategory } from "@/types/categorynews";
 import { CATEGORIES_NEWS } from "@/data/categorynews";
 import Icons from "../icon/icon";
 import useOutsideClick from "@/hook/useOutsideClick";
-import { set } from "react-hook-form";
 
 const MultipleSelect = (): JSX.Element => {
     const searchParams = useSearchParams();
