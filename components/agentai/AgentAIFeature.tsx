@@ -6,6 +6,8 @@ import Image from "next/image";
 import Pusher from "pusher-js";
 import { getCurrentTime } from "@/utils/getCurrentTime";
 import LogoCoin from "@/public/images/coin1.png";
+import axios from "axios";
+
 const spaceMono = Space_Mono({
     variable: "--font-space-mono",
     subsets: ["latin"],
@@ -17,10 +19,11 @@ const AgentAIFeature = React.memo(() => {
     const [message, setMessage] = useState<{ time: string; message: string }[]>([]);
 
     useEffect(() => {
-        // Initialize Pusher with your app credentials
-        setMessage([]);
-        handleUpdateNews();
 
+        setMessage([]);
+
+        
+        // Initialize Pusher with your app credentials
         const pusher = new Pusher(process.env.NEXT_PUBLIC_PUSHER_KEY as string, {
             cluster: process.env.NEXT_PUBLIC_PUSHER_CLUSTER as string,
         });
@@ -45,17 +48,16 @@ const AgentAIFeature = React.memo(() => {
     }, []);
 
     const handleUpdateNews = async () => {
-        await fetch("/api/cron/start", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                schedule: "*/15 * * * *", // every 30 minute
-                query: "",
-                // statusTrigger,
-            }), // every minute
+        await axios.post("/api/cron/start", {
+            schedule: "*/15 * * * *", // every 30 minute
+            query: "",
         });
     };
 
+
+    useEffect(() => {
+        // handleUpdateNews();
+    }, []);
     return (
         <div className="w-100">
             <div className="rounded overflow-hidden">

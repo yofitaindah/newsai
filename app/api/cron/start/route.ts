@@ -71,7 +71,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
                         if (responseOfTweet) {
                             console.log("ok");
                             pusher.trigger("agent", "news", {
-                                message: responseOfTweet,
+                                message: generateSummary,
                             });
                         } else {
                             console.log("tidak ok");
