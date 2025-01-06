@@ -11,8 +11,7 @@ import useOutsideClick from "@/hook/useOutsideClick";
 
 const MultipleSelect = (): JSX.Element => {
     const searchParams = useSearchParams();
-    const paramsFlag = searchParams.get("controlNews");
-    const [controlNews, setControlNews] = useState(paramsFlag === "true" ? true : false);
+    const [controlNews, setControlNews] = useState(false);
     const [query, setQuery] = useState("");
     const [selected, setSelected] = useState<string[]>([]);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -56,6 +55,11 @@ const MultipleSelect = (): JSX.Element => {
             body: JSON.stringify({}), // every minute
         });
     };
+
+    useEffect(() => {
+        const paramsFlag = searchParams.get("controlNews");
+        setControlNews(paramsFlag === "true" ? true : false);
+    }, [searchParams]);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
