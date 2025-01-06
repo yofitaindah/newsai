@@ -12,9 +12,7 @@ export default function ReviewsSection() {
 					<div className="col-lg-9">
 						<div className="text-center">
 							<Reveal el="h1" className="text-white" delay={0.05}>
-								<span className="text-primary-dark">NewsAI.</span> Received{" "}
-								<Image placeholder="blur" src={starIcon} alt="icon" /> 4.8/5 Stars
-								in Over 10,000+ Reviews.
+								<span className="text-primary-dark">NewsAI</span> Trending{" "}
 							</Reveal>
 						</div>
 					</div>
