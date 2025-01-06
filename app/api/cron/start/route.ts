@@ -41,6 +41,9 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     let interval: NodeJS.Timeout;
 
     const sendMessage = async () => {
+        console.log('currentMessageIndex', currentMessageIndex);
+        console.log('messages',  messages.length );
+
         if (currentMessageIndex < messages.length) {
             console.log("bottt");
             await pusher.trigger("agent", "news", {

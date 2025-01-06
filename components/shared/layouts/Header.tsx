@@ -126,22 +126,6 @@ export default function Header() {
         };
     }, []);
 
-    const handleUpdateNews = async () => {
-        await fetch("/api/cron/start", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                schedule: "*/15 * * * *", // every 30 minute
-                query: "",
-                // statusTrigger,
-            }), // every minute
-        });
-    };
-
-    useEffect(() => {
-        handleUpdateNews();
-    }, []);
-
     return (
         <nav
             className={classNames("navbar navbar-expand-lg fixed-top", {
