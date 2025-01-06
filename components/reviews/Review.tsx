@@ -21,7 +21,7 @@ export default function Review({ data }: TReviewProps) {
 				</div>
 			</div>
 			<div className="">
-				<Rating rating={rating} className="mb-3" />
+				{/* <Rating rating={rating} className="mb-3" /> */}
 				<p className="review-text mb-0">{message}</p>
 			</div>
 		</div>
