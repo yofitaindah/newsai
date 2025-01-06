@@ -190,7 +190,7 @@ export default function Header() {
                             ))}
                         </ul>
                         <div className="">
-                            <Link href="/" className="btn btn-outline-primary-dark">
+                            <Link href="https://t.me/newsaiagent_bot" className="btn btn-outline-primary-dark">
                                 Get started
                             </Link>
                         </div>
