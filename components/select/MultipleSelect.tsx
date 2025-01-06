@@ -162,7 +162,7 @@ const MultipleSelect = React.memo(() => {
                                     zIndex: 100,
                                 }}
                             >
-                                <ul className="w-full" style={{listStyle: "none"}}>
+                                <ul className="w-full" style={{ listStyle: "none" }}>
                                     {filteredTags?.length ? (
                                         filteredTags.map((tag, i) => (
                                             <li

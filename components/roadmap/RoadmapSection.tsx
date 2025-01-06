@@ -19,7 +19,7 @@ export default function RoadmapSection() {
             <ul>
               <li>Build core features: news aggregation, sentiment analysis, and real-time alerts</li>
               <li>Launch web dashboard and mobile app prototypes</li>
-              <li>Launching NEWS AI $NEAI on Uniswap, ERC20</li>
+              <li>Launching NEWS AI $NXAI on Uniswap, ERC20</li>
               <li>Engaging the community through community outreach</li>
             </ul>
           </p>
@@ -33,7 +33,7 @@ export default function RoadmapSection() {
           <p className="text-muted">
             <ul>
               <li>Implement advanced NLP models for summarization and context understanding</li>
-              <li>Introduce recommendation engines. Auditing $NEAI to increase holder trust</li>
+              <li>Introduce recommendation engines. Auditing $NXAI to increase holder trust</li>
               <li>Accelerating community expansion through user engagement marketing campaigns</li>
             </ul>
           </p>
@@ -63,7 +63,7 @@ export default function RoadmapSection() {
            <ul>
               <li>Add user forums and discussion boards</li>
               <li>Launch educational content and tutorials</li>
-              <li>More feature on the $NEAI Platform</li>
+              <li>More feature on the $NXAI Platform</li>
               <li>Fixing bugs and adjusting the platform based on beta user feedback</li>
             </ul>
           </p>

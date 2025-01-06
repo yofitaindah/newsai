@@ -90,5 +90,5 @@ export const dataReviews: TReview[] = [
         rating: null,
         message:
             "Dogecoin (DOGE) demonstrates resilience with notable price increases, suggesting potential for sideways trading, according to Coinotag.",
-    }
-]
+    },
+];
