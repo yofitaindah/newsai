@@ -41,8 +41,8 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     let interval: NodeJS.Timeout;
 
     const sendMessage = async () => {
-        console.log('currentMessageIndex', currentMessageIndex);
-        console.log('messages',  messages.length );
+        console.log("currentMessageIndex", currentMessageIndex);
+        console.log("messages", messages.length);
 
         if (currentMessageIndex < messages.length) {
             console.log("bottt");
@@ -56,13 +56,12 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             clearInterval(interval);
             const cronSchedule = process.env.NEXT_CRON_SCHEDULE as string;
 
-            startCronJob(cronSchedule, async () => {
-                console.log("Running scheduled task at", new Date());
+            const init = async () => {
                 try {
                     const responseNews = await fetchNews(query);
 
                     const { body, url } = responseNews;
-                    console.log('Trying to generate summary...');
+                    console.log("Trying to generate summary...");
                     const generateSummary = await summarizeNews(body, url);
 
                     if (generateSummary) {
@@ -72,7 +71,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
                         if (responseOfTweet) {
                             console.log("ok");
                             pusher.trigger("agent", "news", {
-                                message: generateSummary,
+                                message: responseOfTweet,
                             });
                         } else {
                             console.log("tidak ok");
@@ -85,6 +84,13 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
                 } catch (error) {
                     console.log("Error fetching crypto news:", error);
                 }
+            };
+
+            await init();
+
+            startCronJob(cronSchedule, async () => {
+                console.log("Running scheduled task at", new Date());
+                await init();
             });
         }
     };

@@ -194,8 +194,8 @@ const MultipleSelect = React.memo(() => {
                     </div>
 
                     <button
-                        className="btn btn-primary-dark"
-                        style={{ margin: "0px !important", placeSelf: "flex-end" }}
+                        className="btn btn-primary-dark mtop-0"
+                        style={{ marginTop: "0px !important", placeSelf: "flex-end" }}
                         type="button"
                         onClick={handleUpdateNews}
                     >
@@ -203,8 +203,8 @@ const MultipleSelect = React.memo(() => {
                     </button>
 
                     <button
-                        className="btn btn-primary-dark"
-                        style={{ margin: "0px !important", placeSelf: "flex-end" }}
+                        className="btn btn-primary-dark mtop-0"
+                        style={{ marginTop: "0px !important", placeSelf: "flex-end" }}
                         type="button"
                         onClick={handleStopCron}
                     >
