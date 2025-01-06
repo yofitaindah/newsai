@@ -122,7 +122,7 @@ const MultipleSelect = React.memo(() => {
                                 type="text"
                                 value={query}
                                 onChange={(e) => setQuery(e.target.value.trimStart())}
-                                placeholder="Search or Create tags"
+                                placeholder="Search Category"
                                 className="bg-transparent text-sm flex-1 caret-rose-600"
                                 style={{
                                     fontSize: "0.875rem",
