@@ -37,56 +37,60 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
     const { schedule, query } = body;
 
-    let currentMessageIndex = 0;
+    let currentMessageIndex: number = 0;
     let interval: NodeJS.Timeout;
-
-    const init = async () => {
-        try {
-            const { body, url } = await fetchNews(query);
-            const generateSummary = await summarizeNews(body, url);
-            console.log("Start broadcast via websocket...");
-
-            if (generateSummary) {
-                const responseOfTweet = await postTweet(generateSummary);
-                if (responseOfTweet) {
-                    pusher.trigger("agent", "news", {
-                        message: generateSummary,
-                    });
-                }
-            } else {
-                pusher.trigger("agent", "news", {
-                    message: body.slice(0, 200),
-                });
-            }
-        } catch (error) {
-            console.error(error);
-            pusher.trigger("agent", "news", {
-                message: "Error fetching news. Please try again later.",
-            });
-        }
-    };
 
     const sendMessage = async () => {
         if (currentMessageIndex < messages.length) {
-            pusher.trigger("agent", "news", {
+            console.log("bottt");
+            await pusher.trigger("agent", "news", {
                 message: messages[currentMessageIndex],
             });
             currentMessageIndex++;
         } else {
-            clearInterval(interval);
+            console.log("trigger");
 
-            startCronJob(schedule || "* * * * *", async () => {
+            clearInterval(interval);
+            const cronSchedule = process.env.NEXT_CRON_SCHEDULE as string;
+
+            startCronJob(cronSchedule, async () => {
                 console.log("Running scheduled task at", new Date());
-                await init();
+                try {
+                    const responseNews = await fetchNews(query);
+
+                    const { body, url } = responseNews;
+                    console.log('Trying to generate summary...');
+                    const generateSummary = await summarizeNews(body, url);
+
+                    if (generateSummary) {
+                        const responseOfTweet = await postTweet(generateSummary);
+                        console.log("responseOfTweet...", responseOfTweet);
+
+                        if (responseOfTweet) {
+                            console.log("ok");
+                            pusher.trigger("agent", "news", {
+                                message: generateSummary,
+                            });
+                        } else {
+                            console.log("tidak ok");
+
+                            pusher.trigger("agent", "news", {
+                                message: "Error Posting news into x.com. Please try again later.",
+                            });
+                        }
+                    }
+                } catch (error) {
+                    console.log("Error fetching crypto news:", error);
+                }
             });
         }
     };
     // Send first message immediately
-    sendMessage();
+    // sendMessage();
 
     // Set interval to trigger messages every 1 minute
     interval = setInterval(sendMessage, 900);
-    return NextResponse.json({ message: "Agent AI started." }, { status: 200 });
+    return NextResponse.json({ message: "Agent AI started successfully." }, { status: 200 });
 }
 
 const fetchNews = async (query: string) => {
@@ -96,7 +100,6 @@ const fetchNews = async (query: string) => {
     if (query) {
         url += `?categories=${query}`;
     }
-    console.log("currentUrl News", url);
     try {
         const response = await axios.get(url, {
             params: { lang: "EN" },
@@ -104,11 +107,12 @@ const fetchNews = async (query: string) => {
                 Authorization: `Apikey ${apiKey}`,
             },
         });
-
+        console.log("news response", response);
         return response.data.Data[0];
     } catch (error) {
-        console.error("Error fetching crypto news:", error);
-        return { error: "Failed to fetch news" };
+        console.log("news err response", error);
+        const errMsg = "news err response";
+        throw new Error(errMsg, { cause: error });
     }
 };
 
@@ -118,11 +122,14 @@ const postTweet = async (text: string) => {
         const result = await client.v2.tweet(text);
 
         const data = result.data;
+        console.log("TWEET response", result);
         return {
             id: data.id,
             text: data.text,
         };
-    } catch (e) {
-        return { error: "Failed to fetch news" + e };
+    } catch (error) {
+        console.log("TWEET err response", error);
+        const errMsg = "TWEET err response";
+        throw new Error(errMsg, { cause: error });
     }
 };

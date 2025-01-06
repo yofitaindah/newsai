@@ -28,9 +28,11 @@ export const summarizeNews = async (text: string, source: string): Promise<strin
             temperature: 0.5,
             max_tokens: 200,
         });
-        console.log("aiResponse", aiResponse);
+        console.log("ai Response", aiResponse);
         return (aiResponse.choices[0].message.content || "") as SummarizeNewsResponse["content"];
     } catch (error) {
-        throw new Error("Summarization failed");
+        console.log('AI err response', error);
+        const errMsg = "AI err response";
+        throw new Error(errMsg, { cause: error });
     }
 };
