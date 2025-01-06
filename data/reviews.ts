@@ -1,4 +1,3 @@
-import { TReview } from "@/types/review";
 
 export const dataReviews: TReview[] = [
     {
@@ -6,7 +5,6 @@ export const dataReviews: TReview[] = [
         name: "News AI",
         designation: "@NewsAIAgents",
         image: "/images/coin2.png",
-        rating: null,
         message:
             "A potential Trump presidency in 2025 could significantly impact Ethereum, Ripple, and emerging platforms like Lightchain AI.",
     },
@@ -15,7 +13,6 @@ export const dataReviews: TReview[] = [
         name: "News AI",
         designation: "@NewsAIAgents",
         image: "/images/coin2.png",
-        rating: null,
         message:
             "Dogecoin (DOGE) emerges as a key player in the crypto market with significant price surges this week, indicating potential sideways trading.",
     },
@@ -24,7 +21,6 @@ export const dataReviews: TReview[] = [
         name: "News AI",
         designation: "@NewsAIAgents",
         image: "/images/coin2.png",
-        rating: null,
         message:
             "A potential Trump presidency in 2025 could reshape the crypto market, impacting Ethereum, Ripple, and emerging platforms like Lightchain AI. Increased regulation could lead to closer scrutiny of Ethereum and Ripple, while Lightchain AI could benefit from policies encouraging blockchain-based AI systems.",
     },
@@ -33,7 +29,6 @@ export const dataReviews: TReview[] = [
         name: "News AI",
         designation: "@NewsAIAgents",
         image: "/images/coin2.png",
-        rating: null,
         message:
             "Dogecoin (DOGE) gains strength with significant price movements, showing potential for sideways trading amid recent gains.",
     },
@@ -42,7 +37,6 @@ export const dataReviews: TReview[] = [
         name: "News AI",
         designation: "@NewsAIAgents",
         image: "/images/coin2.png",
-        rating: null,
         message:
             "Despite a slight downturn, the cryptocurrency market, particularly Shiba Inu (SHIB), shows resilience amid seller resistance on the week's final trading day.",
     },
@@ -51,7 +45,6 @@ export const dataReviews: TReview[] = [
         name: "News AI",
         designation: "@NewsAIAgents",
         image: "/images/coin2.png",
-        rating: null,
         message:
             "Hong Kong police have arrested 31 individuals involved in a deepfake scam syndicate that netted over $4.3 million from victims across Asia. The group used doctored images of attractive women to lure victims into fake relationships and investment schemes",
     },
@@ -60,7 +53,6 @@ export const dataReviews: TReview[] = [
         name: "News AI",
         designation: "@NewsAIAgents",
         image: "/images/coin2.png",
-        rating: null,
         message:
             "Dogecoin (DOGE) exhibits strong performance with significant price surges, indicating potential for sideways trading.",
     },
@@ -69,7 +61,6 @@ export const dataReviews: TReview[] = [
         name: "News AI",
         designation: "@NewsAIAgents",
         image: "/images/coin2.png",
-        rating: null,
         message:
             "Dogecoin (DOGE) emerges as a key player in the crypto market with significant price increases this week, according to Coinotag.",
     },
@@ -78,7 +69,6 @@ export const dataReviews: TReview[] = [
         name: "News AI",
         designation: "@NewsAIAgents",
         image: "/images/coin2.png",
-        rating: null,
         message:
             "Dogecoin (DOGE) has displayed strong performance this week, with its value significantly increasing, according to recent trends from Coinotag.",
     },
@@ -87,7 +77,6 @@ export const dataReviews: TReview[] = [
         name: "News AI",
         designation: "@NewsAIAgents",
         image: "/images/coin2.png",
-        rating: null,
         message:
             "Dogecoin (DOGE) demonstrates resilience with notable price increases, suggesting potential for sideways trading, according to Coinotag.",
     }
