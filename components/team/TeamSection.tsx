@@ -10,7 +10,7 @@ export default function TeamSection() {
 					<div className="col-lg-9">
 						<Reveal className="text-center" delay={0.05}>
 							<h1 className="text-white">
-								<span className="text-primary-dark">NewsAI.</span> is Powered by a{" "}
+								<span className="text-primary-dark">NewsAI</span> is Powered by a{" "}
 								<br className="d-none d-xl-block" />
 								Dynamic Team.
 							</h1>
@@ -18,7 +18,7 @@ export default function TeamSection() {
 					</div>
 				</div>
 
-				<div className="row justify-center row-cols-1 row-cols-md-3 row-cols-xl-4 gy-10 gy-md-12 gy-lg-18">
+				<div className="row justify-center row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 gy-10 gy-md-12 gy-lg-18">
 					{dataTeam.map((team) => (
 						<Reveal key={team.id} className="col" delay={0.05}>
 							<TeamProfile data={team} />
