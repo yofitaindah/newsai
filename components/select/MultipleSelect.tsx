@@ -162,12 +162,12 @@ const MultipleSelect = React.memo(() => {
                                     zIndex: 100,
                                 }}
                             >
-                                <ul className="w-full">
+                                <ul className="w-full" style={{listStyle: "none"}}>
                                     {filteredTags?.length ? (
                                         filteredTags.map((tag, i) => (
                                             <li
                                                 key={i}
-                                                className="p-2 cursor-pointer hover:bg-rose-50 hover:text-rose-500 rounded-md w-full"
+                                                className="p-2 cursor-pointer hover:bg-rose-50 hover:text-rose-500 rounded-md w-full text-start"
                                                 onMouseDown={(e) => e.preventDefault()}
                                                 onClick={() => {
                                                     setMenuOpen(true);
