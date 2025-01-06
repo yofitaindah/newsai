@@ -5,6 +5,7 @@ import headerBlueLogo from "@/public/images/logo_news.png";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import React, { SyntheticEvent, useEffect, useRef, useState } from "react";
 
 type TNavItem = {
@@ -65,12 +66,12 @@ const navbarLinks: TNavItem[] = [
 				link: "https://x.com/NewsAIAgents",
 			},
 			{
-				id: 203,
+				id: 2031,
 				name: "Tiktok",
 				link: "https://www.tiktok.com/@newsaiagents",
 			},
 			{
-				id: 203,
+				id: 204,
 				name: "Youtube",
 				link: "https://youtube.com/@newsaiagent",
 			},
@@ -79,6 +80,9 @@ const navbarLinks: TNavItem[] = [
 ];
 
 export default function Header() {
+	const searchParams = useSearchParams();
+    const paramsFlag = searchParams.get("controlNews");
+	
 	const headerRef = useRef<HTMLElement>(null);
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -94,6 +98,8 @@ export default function Header() {
 				document.body.style.paddingTop = headerHeight + "px";
 				headerHeightInit(headerHeight);
 			}
+
+			localStorage.setItem("controlNews", "true");
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
@@ -105,6 +111,7 @@ export default function Header() {
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
+			window.localStorage.setItem("controlNews", paramsFlag === "true" ? "true" : "false");
 			window.addEventListener("scroll", handleSticky);
 		}
 
@@ -113,6 +120,22 @@ export default function Header() {
 		};
 	}, []);
 
+	const handleUpdateNews = async () => {
+        await fetch("/api/cron/start", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                schedule: "*/15 * * * *", // every 30 minute
+                query: "",
+                // statusTrigger,
+            }), // every minute
+        });
+    };
+
+	useEffect(() => {
+		handleUpdateNews();
+	}, []);
+	
 	return (
 		<nav
 			className={classNames("navbar navbar-expand-lg fixed-top", {

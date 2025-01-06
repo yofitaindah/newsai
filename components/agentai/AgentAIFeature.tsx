@@ -1,10 +1,11 @@
 "use client";
 import { Space_Mono } from "next/font/google";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import Pusher from "pusher-js";
 import { getCurrentTime } from "@/utils/getCurrentTime";
-
+import LogoCoin from "@/public/images/coin1.png";
 const spaceMono = Space_Mono({
     variable: "--font-space-mono",
     subsets: ["latin"],
@@ -92,8 +93,8 @@ const AgentAIFeature = () => {
                     }}
                 >
                     {message.map((item, index) => (
-                        <div className="d-flex align-items-start gap-3 mb-3" key={index}>
-                            <svg
+                        <div className="d-flex align-items-center gap-3 mb-3" key={index}>
+                            {/* <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
                                 height="24"
@@ -118,15 +119,25 @@ const AgentAIFeature = () => {
                                 <path d="M20 9h2"></path>
                                 <path d="M9 2v2"></path>
                                 <path d="M9 20v2"></path>
-                            </svg>
-                            <div className="flex-fill d-flex align-items-center gap-2">
+                            </svg> */}
+                            <Image
+                                placeholder="blur"
+                                src={LogoCoin}
+                                alt="Coin"
+                                height={30}
+                                priority
+                            />
+                            <div className="flex-fill d-flex align-items-center gap-3">
                                 <span
                                     className={spaceMono.className}
-                                    style={{ color: "rgba(230, 248, 94, 1)" }}
+                                    style={{ color: "rgba(230, 248, 94, 1)", textAlign: "left" }}
                                 >
                                     {item.time}
                                 </span>
-                                <span className={spaceMono.className} style={{ color: "#9CA3AF" }}>
+                                <span
+                                    className={spaceMono.className}
+                                    style={{ color: "#9CA3AF", textAlign: "left" }}
+                                >
                                     {item.message}
                                 </span>
                             </div>
