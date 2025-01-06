@@ -100,7 +100,6 @@ const fetchNews = async (query: string) => {
     if (query) {
         url += `?categories=${query}`;
     }
-
     try {
         const response = await axios.get(url, {
             params: { lang: "EN" },
