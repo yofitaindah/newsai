@@ -10,6 +10,7 @@ const messages = [
     "Initializing Agent AI...",
     "Loading AI models and configurations...",
     "Agent AI started...",
+    "Your post was up on Twitter just five minutes later...",
 ];
 
 const pusher = new Pusher({
@@ -87,7 +88,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
                 }
             };
 
-            await init();
+            // await init();
 
             startCronJob(cronSchedule, async () => {
                 console.log("Running scheduled task at", new Date());
