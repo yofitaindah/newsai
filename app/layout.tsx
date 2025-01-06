@@ -8,36 +8,36 @@ import "@/scss/style.scss";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-	title: {
-		template: "%s | NewsAI",
-		default: "NewsAI",
-	},
-	description: "AI Based Copywriting and Content Writing Nextjs Landing Page Template",
+    title: {
+        template: "%s | NewsAI",
+        default: "NewsAI",
+    },
+    description: "AI Based Copywriting and Content Writing Nextjs Landing Page Template",
 };
 
 type TRootLayoutProps = {
-	children: React.ReactNode;
+    children: React.ReactNode;
 };
 
 export default function RootLayout({ children }: TRootLayoutProps) {
-	return (
-		<html lang="en" data-bs-theme="dark">
-			<head>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</head>
-			<body>
-				<RootClientLayout>
-					<div className="wrapper d-flex flex-column justify-between">{children}</div>
-				</RootClientLayout>
-				{process.env.SWITCHER_LINK ? (
-					<Link
-						href={process.env.SWITCHER_LINK}
-						className="version-switcher bg-primary position-fixed text-white"
-					>
-						Light Version
-					</Link>
-				) : null}
-			</body>
-		</html>
-	);
+    return (
+        <html lang="en" data-bs-theme="dark">
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </head>
+            <body>
+                <RootClientLayout>
+                    <div className="wrapper d-flex flex-column justify-between">{children}</div>
+                </RootClientLayout>
+                {process.env.SWITCHER_LINK ? (
+                    <Link
+                        href={process.env.SWITCHER_LINK}
+                        className="version-switcher bg-primary position-fixed text-white"
+                    >
+                        Light Version
+                    </Link>
+                ) : null}
+            </body>
+        </html>
+    );
 }

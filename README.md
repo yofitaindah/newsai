@@ -33,5 +33,18 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## using cron job
-This app using cron
+1. Pastikan berada di branch utama (main / master)
+2. Jika tidak pada branch main, maka ketikkan perintah berikut:
+    - git fetch
+    - git checkout main
+    - git pull origin main
+3. Jika sudah berada pada branch main maka ketikkan perintah berikut:
+    - git fetch
+    - git pull origin main
+4. Ketika ingin mengerjakan task / story maka sebaiknya membuat branch baru agar lebih terstruktur, dengan cara:
+    - git checkout -b YOUR_BRANCH_NAME  (ex: git checkout -b feat/story-1 or fix/about-page)
+5. Lakukan perubahan data / code
+6. Setelah selesai melakukan perubahan data, maka
+    - git add .
+    - git commit -m"fix: menambahkan section untuk xxxxx"
+    - git push
