@@ -11,7 +11,7 @@ export const dataBlockFeatures: TBlockFeature[] = [
 		],
 		image: "/images/illustrations/feature-illustration-1-dark.svg",
 		linkText: "Get Started Free",
-		linkUrl: "/login",
+		linkUrl: "https://news-aiagent.com/",
 	},
 	{
 		id: 2,
@@ -23,7 +23,7 @@ export const dataBlockFeatures: TBlockFeature[] = [
 		],
 		image: "/images/illustrations/feature-illustration-2-dark.svg",
 		linkText: "Request A Demo",
-		linkUrl: "/login",
+		linkUrl: "https://x.com/NewsAIAgents",
 	},
 	{
 		id: 3,
@@ -35,6 +35,6 @@ export const dataBlockFeatures: TBlockFeature[] = [
 		],
 		image: "/images/illustrations/feature-illustration-3-dark.svg",
 		linkText: "Get Started Free",
-		linkUrl: "/login",
+		linkUrl: "http://t.me/NewsAiAgent",
 	},
 ];
