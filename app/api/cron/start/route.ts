@@ -41,66 +41,100 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     let currentMessageIndex: number = 0;
     let interval: NodeJS.Timeout;
 
-    const sendMessage = async () => {
-        console.log("currentMessageIndex", currentMessageIndex);
-        console.log("messages", messages.length);
 
-        if (currentMessageIndex < messages.length) {
-            console.log("bottt");
-            await pusher.trigger("agent", "news", {
-                message: messages[currentMessageIndex],
-            });
-            currentMessageIndex++;
-        } else {
-            console.log("trigger");
+    const init = async () => {
+        try {
+            const responseNews = await fetchNews(query);
 
-            clearInterval(interval);
-            const cronSchedule = "*/5 * * * *";
+            const { body, url } = responseNews;
+            console.log("Trying to generate summary...");
+            const generateSummary = await summarizeNews(body, url);
 
-            const init = async () => {
-                try {
-                    const responseNews = await fetchNews(query);
+            if (generateSummary) {
+                const responseOfTweet = await postTweet(generateSummary);
+                console.log("responseOfTweet...", responseOfTweet);
 
-                    const { body, url } = responseNews;
-                    console.log("Trying to generate summary...");
-                    const generateSummary = await summarizeNews(body, url);
-
-                    if (generateSummary) {
-                        const responseOfTweet = await postTweet(generateSummary);
-                        console.log("responseOfTweet...", responseOfTweet);
-
-                        if (responseOfTweet) {
-                            console.log("pusher runnning!..");
-                            pusher.trigger("agent", "news", {
-                                message: generateSummary,
-                            });
-                        } else {
-                            console.log("pusher failed runnning!..");
+                if (responseOfTweet) {
+                    console.log("pusher runnning!..");
+                    pusher.trigger("agent", "news", {
+                        message: generateSummary,
+                    });
+                } else {
+                    console.log("pusher failed runnning!..");
 
 
-                            pusher.trigger("agent", "news", {
-                                message: "Error Posting news into x.com. Please try again later.",
-                            });
-                        }
-                    }
-                } catch (error) {
-                    console.log("Error fetching crypto news:", error);
+                    pusher.trigger("agent", "news", {
+                        message: "Error Posting news into x.com. Please try again later.",
+                    });
                 }
-            };
-
-            // await init();
-
-            startCronJob(cronSchedule, async () => {
-                console.log("Running scheduled task at", new Date());
-                await init();
-            });
+            }
+        } catch (error) {
+            console.log("Error fetching crypto news:", error);
         }
     };
+
+    await init();
+
+    // const sendMessage = async () => {
+    //     console.log("currentMessageIndex", currentMessageIndex);
+    //     console.log("messages", messages.length);
+
+    //     if (currentMessageIndex < messages.length) {
+    //         console.log("bottt");
+    //         await pusher.trigger("agent", "news", {
+    //             message: messages[currentMessageIndex],
+    //         });
+    //         currentMessageIndex++;
+    //     } else {
+    //         console.log("trigger");
+
+    //         clearInterval(interval);
+    //         const cronSchedule = "*/5 * * * *";
+
+    //         const init = async () => {
+    //             try {
+    //                 const responseNews = await fetchNews(query);
+
+    //                 const { body, url } = responseNews;
+    //                 console.log("Trying to generate summary...");
+    //                 const generateSummary = await summarizeNews(body, url);
+
+    //                 if (generateSummary) {
+    //                     const responseOfTweet = await postTweet(generateSummary);
+    //                     console.log("responseOfTweet...", responseOfTweet);
+
+    //                     if (responseOfTweet) {
+    //                         console.log("pusher runnning!..");
+    //                         pusher.trigger("agent", "news", {
+    //                             message: generateSummary,
+    //                         });
+    //                     } else {
+    //                         console.log("pusher failed runnning!..");
+
+
+    //                         pusher.trigger("agent", "news", {
+    //                             message: "Error Posting news into x.com. Please try again later.",
+    //                         });
+    //                     }
+    //                 }
+    //             } catch (error) {
+    //                 console.log("Error fetching crypto news:", error);
+    //             }
+    //         };
+
+    //         await init();
+
+    //         startCronJob(cronSchedule, async () => {
+    //             console.log("Running scheduled task at", new Date());
+    //             await init();
+    //         });
+    //     }
+    // };
     // Send first message immediately
     // sendMessage();
 
     // Set interval to trigger messages every 1 minute
-    interval = setInterval(sendMessage, 900);
+    // interval = setInterval(sendMessage, 900);
     return NextResponse.json({ message: "Agent AI started successfully." }, { status: 200 });
 }
 
