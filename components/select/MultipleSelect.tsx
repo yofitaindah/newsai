@@ -9,7 +9,7 @@ import { CATEGORIES_NEWS } from "@/data/categorynews";
 import Icons from "../icon/icon";
 import useOutsideClick from "@/hook/useOutsideClick";
 
-const MultipleSelect = (): JSX.Element => {
+const MultipleSelect = React.memo(() => {
     const searchParams = useSearchParams();
     const [controlNews, setControlNews] = useState(false);
     const [query, setQuery] = useState("");
@@ -122,7 +122,7 @@ const MultipleSelect = (): JSX.Element => {
                                 type="text"
                                 value={query}
                                 onChange={(e) => setQuery(e.target.value.trimStart())}
-                                placeholder="Search or Create tags"
+                                placeholder="Search Category"
                                 className="bg-transparent text-sm flex-1 caret-rose-600"
                                 style={{
                                     fontSize: "0.875rem",
@@ -162,12 +162,12 @@ const MultipleSelect = (): JSX.Element => {
                                     zIndex: 100,
                                 }}
                             >
-                                <ul className="w-full">
+                                <ul className="w-full" style={{ listStyle: "none" }}>
                                     {filteredTags?.length ? (
                                         filteredTags.map((tag, i) => (
                                             <li
                                                 key={i}
-                                                className="p-2 cursor-pointer hover:bg-rose-50 hover:text-rose-500 rounded-md w-full"
+                                                className="p-2 cursor-pointer hover:bg-rose-50 hover:text-rose-500 rounded-md w-full text-start"
                                                 onMouseDown={(e) => e.preventDefault()}
                                                 onClick={() => {
                                                     setMenuOpen(true);
@@ -194,8 +194,8 @@ const MultipleSelect = (): JSX.Element => {
                     </div>
 
                     <button
-                        className="btn btn-primary-dark"
-                        style={{ margin: "0px !important", placeSelf: "flex-end" }}
+                        className="btn btn-primary-dark mtop-0"
+                        style={{ marginTop: "0px !important", placeSelf: "flex-end" }}
                         type="button"
                         onClick={handleUpdateNews}
                     >
@@ -203,8 +203,8 @@ const MultipleSelect = (): JSX.Element => {
                     </button>
 
                     <button
-                        className="btn btn-primary-dark"
-                        style={{ margin: "0px !important", placeSelf: "flex-end" }}
+                        className="btn btn-primary-dark mtop-0"
+                        style={{ marginTop: "0px !important", placeSelf: "flex-end" }}
                         type="button"
                         onClick={handleStopCron}
                     >
@@ -220,6 +220,8 @@ const MultipleSelect = (): JSX.Element => {
             )}
         </div>
     );
-};
+});
+
+MultipleSelect.displayName = "MultipleSelect";
 
 export default MultipleSelect;

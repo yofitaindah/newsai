@@ -3,6 +3,6 @@ export type TReview = {
     name: string;
     designation: string;
     image: string;
-    rating: number;
+    rating: number | null;
     message: string;
 };
