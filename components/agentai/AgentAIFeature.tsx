@@ -42,22 +42,30 @@ const AgentAIFeature = React.memo(() => {
         });
         // Cleanup on component unmount
         return () => {
-            channel.unbind_all();
             pusher.unsubscribe("agent");
         };
     }, []);
 
-    const handleUpdateNews = async () => {
-        await axios.post("/api/cron/start", {
-            schedule: "*/15 * * * *", // every 30 minute
-            query: "",
-        });
-    };
 
+    // useEffect(() => {
+    //     // Initialize Pusher client
+    //     setMessage([]);
+    //     const pusher = new Pusher(process.env.NEXT_PUBLIC_PUSHER_KEY as string, {
+    //         cluster: process.env.NEXT_PUBLIC_PUSHER_CLUSTER as string,
+    //     });
 
-    useEffect(() => {
-        // handleUpdateNews();
-    }, []);
+    //     const channel = pusher.subscribe("agent");
+    //     channel.bind("news", (data: { message: string }) => {
+    //         setMessage((message: { time: string; message: string }[]) => [
+    //             ...message,
+    //             {
+    //                 time: getCurrentTime(),
+    //                 message: data.message,
+    //             },
+    //         ]);
+    //     });
+    // }, []);
+
     return (
         <div className="w-100">
             <div className="rounded overflow-hidden">

@@ -54,7 +54,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             console.log("trigger");
 
             clearInterval(interval);
-            const cronSchedule = process.env.NEXT_CRON_SCHEDULE as string;
+            const cronSchedule = "*/5 * * * *";
 
             const init = async () => {
                 try {
@@ -69,12 +69,13 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
                         console.log("responseOfTweet...", responseOfTweet);
 
                         if (responseOfTweet) {
-                            console.log("ok");
+                            console.log("pusher runnning!..");
                             pusher.trigger("agent", "news", {
                                 message: generateSummary,
                             });
                         } else {
-                            console.log("tidak ok");
+                            console.log("pusher failed runnning!..");
+
 
                             pusher.trigger("agent", "news", {
                                 message: "Error Posting news into x.com. Please try again later.",
@@ -116,7 +117,7 @@ const fetchNews = async (query: string) => {
                 Authorization: `Apikey ${apiKey}`,
             },
         });
-        console.log("news response", response);
+        console.log("news response", response.data.Data[0]);
         return response.data.Data[0];
     } catch (error) {
         console.log("news err response", error);
@@ -131,7 +132,7 @@ const postTweet = async (text: string) => {
         const result = await client.v2.tweet(text);
 
         const data = result.data;
-        console.log("TWEET response", result);
+        console.log("TWEET response", data);
         return {
             id: data.id,
             text: data.text,
