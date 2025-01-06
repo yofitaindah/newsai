@@ -82,7 +82,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" target="_blank">
+                  <Link href="https://www.dextools.io/app/en/ether/pair-explorer/0x789dfd258c1c1e324ce6772e9e936c097b092ff2" target="_blank">
                     <Image
                       src={DextoolIcon}
                       alt="Dextool"
@@ -92,7 +92,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" target="_blank">
+                  <Link href="https://dexscreener.com/ethereum/0x789dfd258c1c1e324ce6772e9e936c097b092ff2" target="_blank">
                     <Image
                       src={EtherscanIcon}
                       alt="Etherscan"

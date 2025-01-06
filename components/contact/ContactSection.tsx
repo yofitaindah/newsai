@@ -22,7 +22,7 @@ type TokenInfo = {
 
 // Data token
 const tokenData: TokenInfo = {
-  contractAddress: "",
+  contractAddress: "0x789dfd258c1c1e324ce6772e9e936c097b092ff2",
   name: "News AI",
   ticker: "NXAI",
   totalSupply: "1,000,000,000",
